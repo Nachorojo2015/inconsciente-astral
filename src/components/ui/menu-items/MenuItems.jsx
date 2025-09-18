@@ -1,0 +1,31 @@
+import { Link } from "react-router-dom";
+import { useSidebarStore } from "../../../store/sidebarStore";
+
+const menuItems = [
+  { name: "Home", link: "/" },
+  { name: "Sobre nosotros", link: "/sobre-nosotros" },
+  { name: "Servicios", link: "/servicios" },
+  { name: "Novedades", link: "/novedades" },
+  { name: "Galería", link: "/galeria" },
+  { name: "Blogs", link: "/blogs" },
+  { name: "Contacto", link: "/contacto" },
+];
+
+export const MenuItems = () => {
+  const toggle = useSidebarStore((state) => state.toggle);
+
+  return (
+    <div className="flex flex-col mt-5">
+      {menuItems.map((item, index) => (
+        <Link
+          to={item.link}
+          key={index}
+          onClick={toggle}
+          className="block p-2 hover:bg-gray-100"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  );
+};
