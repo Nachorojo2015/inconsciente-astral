@@ -5,9 +5,7 @@ const menuItems = [
   { name: "Home", link: "/" },
   { name: "Sobre nosotros", link: "/sobre-nosotros" },
   { name: "Servicios", link: "/servicios" },
-  { name: "Novedades", link: "/novedades" },
   { name: "Galería", link: "/galeria" },
-  { name: "Blogs", link: "/blogs" },
   { name: "Contacto", link: "/contacto" },
 ];
 
